@@ -4,4 +4,19 @@
     <string name="title_activity_intro">Intro</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="country_prompt">Choose a country</string>
+
+        <string-array name="country_arrays">
+            <item>English</item>
+            <item>French</item>
+            <item>Italian</item>
+            <item>German</item>
+            <item>Chinese</item>
+            <item>Japanese</item>
+            <item>Korean</item>
+            <item>Mobile Default</item>
+        </string-array>
+
 </resources>

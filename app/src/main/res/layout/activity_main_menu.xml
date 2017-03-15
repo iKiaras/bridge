@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,6 +14,8 @@
     <com.google.android.gms.ads.AdView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
         android:id="@+id/adView"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -30,7 +33,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:id="@+id/editTextInput"
         android:layout_marginBottom="18dp"
@@ -38,10 +40,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/buttonSubmit"
-        android:layout_toStartOf="@+id/buttonSubmit" />
+        android:layout_toStartOf="@+id/buttonSubmit"
+        android:text="Write here" />
 
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -72,16 +74,19 @@
         android:layout_toRightOf="@+id/textViewLanguage"
         android:layout_toEndOf="@+id/textViewLanguage"
         android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp" />
+        android:layout_marginStart="15dp"
+        android:entries="@array/country_arrays"
+        android:prompt="@string/country_prompt"
+        />
 
     <Button
-        android:text="Speak"
+        android:text="Read The Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/button2" />
+        android:id="@+id/buttonReadText" />
 
     <Button
         android:text="Listen"
@@ -90,7 +95,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/adView"
         android:layout_alignEnd="@+id/adView"
-        android:id="@+id/button3" />
+        android:id="@+id/buttonListen" />
 
     <TextView
         android:text="Bridge"
@@ -98,8 +103,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button3"
-        android:layout_toStartOf="@+id/button3"
+        android:layout_toLeftOf="@+id/buttonListen"
+        android:layout_toStartOf="@+id/buttonListen"
         android:layout_marginRight="66dp"
         android:layout_marginEnd="66dp" />
 </RelativeLayout>
