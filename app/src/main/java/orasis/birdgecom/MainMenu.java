@@ -1,4 +1,4 @@
-package orasis.birdge;
+package orasis.birdgecom;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -9,9 +9,6 @@ import android.os.Build;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringDef;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
@@ -135,6 +132,7 @@ public class MainMenu extends Activity {
 
     private void changeLanguage(Locale locale) {
         speech.setLanguage(locale);
+        voiceRecogniser = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         voiceRecogniser.putExtra(RecognizerIntent.EXTRA_LANGUAGE, locale);
         Resources res = getApplicationContext().getResources();
         DisplayMetrics displayMetrics = res.getDisplayMetrics();

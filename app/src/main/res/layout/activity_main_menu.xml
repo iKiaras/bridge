@@ -1,110 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_dark_default"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="orasis.birdge.MainMenu">
+    android:visibility="visible"
+    tools:context="orasis.birdgecom.MainMenu">
 
     <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:id="@+id/adView"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
 
     <Button
-        android:text="Submit"
+        android:id="@+id/buttonSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/editTextInput"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/buttonSubmit" />
+        android:layout_alignParentRight="true"
+        android:text="Submit" />
 
     <EditText
+        android:id="@+id/editTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editTextInput"
-        android:layout_marginBottom="18dp"
         android:layout_above="@+id/adView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
         android:layout_toLeftOf="@+id/buttonSubmit"
         android:layout_toStartOf="@+id/buttonSubmit"
-        android:text="Write here" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:text="Write here" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="152dp"
         android:id="@+id/textViewBridge"
-        android:layout_above="@+id/buttonSubmit"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="Language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSubmit"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="152dp" />
+
+    <TextView
         android:id="@+id/textViewLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/languageList"
         android:layout_alignBottom="@+id/languageList"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="Language" />
 
     <Spinner
+        android:id="@+id/languageList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:id="@+id/languageList"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textViewLanguage"
-        android:layout_toEndOf="@+id/textViewLanguage"
         android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="68dp"
+        android:layout_toEndOf="@+id/textViewLanguage"
+        android:layout_toRightOf="@+id/textViewLanguage"
         android:entries="@array/country_arrays"
-        android:prompt="@string/country_prompt"
-        />
+        android:prompt="@string/country_prompt" />
 
     <Button
-        android:text="Read The Text"
+        android:id="@+id/buttonReadText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/buttonReadText" />
+        android:layout_alignParentTop="true"
+        android:text="Read The Text" />
 
     <Button
-        android:text="Listen"
+        android:id="@+id/buttonListen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/adView"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/adView"
-        android:layout_alignEnd="@+id/adView"
-        android:id="@+id/buttonListen" />
+        android:text="Listen" />
 
-    <TextView
-        android:text="Bridge"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/buttonReadText"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/buttonListen"
-        android:layout_toStartOf="@+id/buttonListen"
-        android:layout_marginRight="66dp"
-        android:layout_marginEnd="66dp" />
+        android:layout_centerHorizontal="true"
+        ads:srcCompat="@mipmap/ic_launcher" />
+
 </RelativeLayout>

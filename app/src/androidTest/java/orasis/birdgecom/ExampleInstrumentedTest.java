@@ -1,4 +1,4 @@
-package orasis.birdge;
+package orasis.birdgecom;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

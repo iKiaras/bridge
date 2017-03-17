@@ -1,4 +1,4 @@
-package orasis.birdge;
+package orasis.birdgecom;
 
 import org.junit.Test;
 
