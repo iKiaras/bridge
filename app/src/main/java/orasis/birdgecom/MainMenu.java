@@ -168,12 +168,14 @@ public class MainMenu extends Activity {
         switch (requestCode) {
             case REQ_CODE_SPEECH_INPUT: {
                 if (resultCode == RESULT_OK && null != data) {
-
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                   // lastCommand = result.get(0);
-                  //  checkMove(lastCommand);
+
+                    lastCommand = result.get(0);
+                    history += '\n' +result.get(0);
+                    bridgeText.setText(history);
                 }
+
                 break;
             }
 
